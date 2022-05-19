@@ -60,7 +60,7 @@
             el.setAttribute("class", "message other-message");
             el.innerHTML = `
                 <div>
-                    <div class="name">${message.username} send</div>
+                    <div class="name2">${message.username} send</div>
                     <div class="text">${message.text}</div>
                 </div>
             `;
