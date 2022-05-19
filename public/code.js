@@ -36,8 +36,8 @@
         window.location.href = window.location.href;
     })
 
-    socket.on("update",function(update){
-        renderMessage("update",update);
+    socket.on("update", function (update) {
+        renderMessage("update", update);
     });
     socket.on("chat", function (message) {
         renderMessage("other", message);
@@ -50,7 +50,7 @@
             el.setAttribute("class", "message my-message");
             el.innerHTML = `
                 <div>
-                    <div class="name">You</div>
+                    <div class="name">${uname} send</div>
                     <div class="text">${message.text}</div>
                 </div>
             `;
@@ -60,7 +60,7 @@
             el.setAttribute("class", "message other-message");
             el.innerHTML = `
                 <div>
-                    <div class="name">${message.username}</div>
+                    <div class="name">${message.username} send</div>
                     <div class="text">${message.text}</div>
                 </div>
             `;
